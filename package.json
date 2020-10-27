@@ -1,0 +1,38 @@
+{
+  "name": "lando-metrics",
+  "description": "Anonymous usage collection, logging, error reporting and other data things.",
+  "license": "GPL-3.0",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lando/metrics"
+  },
+  "bugs": {
+    "email": "mike@lando.dev",
+    "url": "https://github.com/lando/metrics/issues"
+  },
+  "scripts": {
+    "lint": "eslint --quiet --no-ignore lib plugins",
+    "release": "bump --prompt --tag --all --push",
+    "dev:metrics": "./node_modules/nodemon/bin/nodemon.js ./server.js",
+    "test": "yarn lint"
+  },
+  "dependencies": {
+    "@bugsnag/js": "^6.4.3",
+    "@octokit/rest": "^17.1.0",
+    "bluebird": "^3",
+    "body-parser": "^1.14.2",
+    "compression": "^1.7.4",
+    "dotenv": "^4.0.0",
+    "elasticsearch": "~10.1.2",
+    "express": "^4.13.3",
+    "platformsh": "^1.0.0",
+    "winston": "^2"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-google": "^0.9.1",
+    "nodemon": "^1.11.0",
+    "version-bump-prompt": "^4.2.1"
+  }
+}
